@@ -10,3 +10,9 @@ a{
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Arial, Helvetica }
+
+@media only screen and (max-width: 600px) {
+  p, h1, h2, h3 {
+    font-size: 4vw; /* O tamanho do texto será 4% da largura da viewport */
+  }
+}

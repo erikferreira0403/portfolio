@@ -1,0 +1,36 @@
+.container{
+  background-color: #495464;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  color: white;
+  flex-direction: column;
+  padding: 20px 0 20px 0;
+}
+
+.skills{
+  display: flex;
+  flex-direction: row;
+  color: rgb(57, 207, 207);
+}
+.skillsContainers{
+  display: flex;
+  flex-direction: row;
+  flex-basis: 100%;
+  flex: 2;
+  margin-bottom: 15px;
+}
+.svg{
+  width: 40px;
+  margin: 0 4px 0 4px;
+}
+
+
+
+  @media only screen and (max-width: 600px) {
+  h2 {
+     font-size: 4vw; /* O tamanho do texto será 4% da largura da viewport */
+   }
+ }

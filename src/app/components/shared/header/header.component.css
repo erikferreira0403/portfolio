@@ -29,3 +29,9 @@
 
 
   }
+
+  @media only screen and (max-width: 600px) {
+    h2, a {
+       font-size: 4vw; /* O tamanho do texto será 4% da largura da viewport */
+     }
+   }
