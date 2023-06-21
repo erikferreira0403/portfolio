@@ -11,6 +11,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
 import { CuriosityComponent } from './components/curiosity/curiosity.component';
 import { AboutComponent } from './pages/about/about.component';
+import { ProjectsComponent } from './pages/projects/projects.component';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 
 @NgModule({
@@ -18,7 +20,8 @@ import { AboutComponent } from './pages/about/about.component';
     AppComponent,
     HeaderComponent,
     CuriosityComponent,
-    AboutComponent
+    AboutComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,8 @@ import { AboutComponent } from './pages/about/about.component';
     MatToolbarModule,
     MatIconModule,
     MatMenuModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
