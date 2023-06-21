@@ -1,7 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 html, body { height: 100%; }
 body { margin: 0; font-family: Arial, Helvetica;
-background-color: #F4F4F2;}
+  background: rgb(103,128,207);
+  background: radial-gradient(circle, rgba(103,128,207,0.48923319327731096) 0%, rgba(148,187,233,1) 100%);}
 
 a{
     text-decoration: none;
@@ -12,7 +13,7 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Arial, Helvetica }
 
 @media only screen and (max-width: 600px) {
-  p, h1, h2, h3 {
+  body {
     font-size: 4vw; /* O tamanho do texto será 4% da largura da viewport */
   }
 }

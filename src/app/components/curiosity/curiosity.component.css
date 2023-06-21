@@ -11,7 +11,7 @@
 }
 .image {
   align-items: center;
-  margin: 0 15px 10px 4px;
+  margin: 0 15px 10px 2px;
   width: 60px;
 }
 
@@ -22,5 +22,8 @@ h1 { font-family: 'Raleway',sans-serif; font-size: 15px; font-weight: 800; line-
    h1 {
       font-size: 4vw; /* O tamanho do texto será 4% da largura da viewport */
       line-height: 1.2;
+    }
+    .image{
+      width: 15vw;
     }
   }

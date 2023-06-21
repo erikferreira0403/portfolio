@@ -1,6 +1,6 @@
 .container{
-  background-color: #495464;
-
+  background: rgb(63,94,251);
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(0,0,0,0.9710259103641457) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8,6 +8,20 @@
   color: white;
   flex-direction: column;
   padding: 20px 0 20px 0;
+}
+.introduce{
+  padding-bottom: 20PX;
+}
+.hello{
+  font-size: 40px;
+  font-weight: 800;
+  display: flex;
+  flex-direction: row;
+}
+.stack{
+  font-size: 80px;
+  font-weight: 800;
+  line-height: 1.1;
 }
 
 .skills{
@@ -24,13 +38,42 @@
 }
 .svg{
   width: 40px;
-  margin: 0 4px 0 4px;
+  margin: 0 4px 0 0px;
+}
+
+.background-image{
+  background-image: url(./icons8-hand-48.png);
+  background-repeat: no-repeat;
+
+    width: 10%;
+    height: 7vh;
 }
 
 
 
-  @media only screen and (max-width: 600px) {
-  h2 {
-     font-size: 4vw; /* O tamanho do texto será 4% da largura da viewport */
+
+
+
+ @media (max-width: 767px) {
+  h2,h1 {
+      font-size: 50vw; /* O tamanho do texto será 4% da largura da viewport */
+      line-height: 1.2;
    }
- }
+   .background-image{
+    width: 12vw;
+    height: 11vw;
+   }
+  .skills{
+    font-size: 4vw;
+  }
+  .svg{
+    width: 8vw;
+  }
+  .hello{
+    font-size: 7vw;
+  }
+  .stack{
+    font-size: 10vw;
+  }
+
+}
