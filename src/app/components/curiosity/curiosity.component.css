@@ -1,0 +1,16 @@
+.container{
+
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+
+
+
+}
+.image {
+  align-items: center;
+  margin: 0 0 10px 10px;
+  width: 60px;
+}
