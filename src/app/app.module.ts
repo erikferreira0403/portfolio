@@ -15,6 +15,7 @@ import { ProjectsComponent } from './pages/projects/projects.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatCardModule} from '@angular/material/card';
 import { VideosComponent } from './components/videos/videos.component';
+import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { VideosComponent } from './components/videos/videos.component';
     MatMenuModule,
     MatButtonModule,
     MatTooltipModule,
-    MatCardModule
+    MatCardModule,
+    NgxPageScrollCoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
