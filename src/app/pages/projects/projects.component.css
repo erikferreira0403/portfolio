@@ -1,4 +1,5 @@
 .container{
+  margin: 20px 0 10px 0;
   width: 100%;
   align-items: center;
   padding-top: 10px;
@@ -13,10 +14,11 @@
     font-weight: 800;
     display: flex;
     flex-direction: row;
-    color: white;
     border: 2px black;
 }
-
+.project{
+    margin-bottom: 7vw;
+}
 .project-section{
   height: 50px;
   width: 400px;
@@ -51,10 +53,13 @@
     flex-wrap: wrap;
     justify-content: space-around;
     flex-direction: column;
+    margin-bottom: 30vw;
+
 
   }
-  .project{
-    margin-bottom: 37vw;
+
+  .project:not(:last-child) {
+    margin-bottom: 40vw;
   }
 
 
@@ -64,7 +69,7 @@
   }
 
   .title{
-    font-size: 7vw;
+    font-size: 4vw;
   }
 }
 
