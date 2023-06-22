@@ -1,9 +1,20 @@
 .container{
-  height: 100px;
-  display: flex;
+  width: 100%;
   align-items: center;
-  justify-content: space-around;
   padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.title{
+    font-size: 40px;
+    font-weight: 800;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    border: 2px black;
 }
 
 .project-section{
@@ -11,6 +22,47 @@
   width: 400px;
   border: 5px;
   border-color: black;
+}
+
+.allProjects{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 14vw; /* Espaçamento inferior entre os cards */
+
+}
+
+
+@media (max-width: 600px) {
+
+  .container{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .allProjects{
+    width: 100%;
+    align-items: center;
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: column;
+
+  }
+
+
+  .project-section{
+    width: 400px;
+    width: calc(100% - 8px); /* Ajuste o tamanho do card conforme necessário */
+    margin-bottom: 47vw; /* Espaçamento inferior entre os cards */
+  }
+
+  .title{
+    font-size: 7vw;
+  }
 }
 
 
