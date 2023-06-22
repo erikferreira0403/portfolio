@@ -13,6 +13,8 @@ import { CuriosityComponent } from './components/curiosity/curiosity.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatCardModule} from '@angular/material/card';
+import { VideosComponent } from './components/videos/videos.component';
 
 
 @NgModule({
@@ -21,7 +23,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     HeaderComponent,
     CuriosityComponent,
     AboutComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    VideosComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatIconModule,
     MatMenuModule,
     MatButtonModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
