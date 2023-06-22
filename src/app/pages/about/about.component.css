@@ -68,9 +68,12 @@
     width: 8vw;
   }
   .hello{
+    margin-left: 7vw;
     font-size: 7vw;
   }
   .stack{
+    margin-left: 11vw;
+
     font-size: 10vw;
   }
 
