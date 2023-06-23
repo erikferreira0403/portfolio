@@ -14,6 +14,16 @@
   width: 3vw;
   margin-right: 2px;
 }
+.shareIcon{
+  width: 4vw;
+  margin-right: 4px;
+}
+.share-button{
+  width: 6vw;
+  height: 6vw;
+  transform: translateY(200%);
+  z-index: 9999;
+}
 
 @media only screen and (max-width: 760px) {
   .share{
@@ -31,4 +41,8 @@
     padding-left: 2px;
   }
 
+  .shareIcon{
+    width: 11vw;
+    margin-right: 4px;
+  }
  }
