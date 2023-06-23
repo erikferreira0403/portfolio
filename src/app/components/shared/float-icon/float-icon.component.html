@@ -1,17 +1,15 @@
 <div class="share">
-  <button class="share-button" mat-fab #tooltip="matTooltip" [matTooltip]="tooltipText"  [matMenuTriggerFor]="menu"  (click)="openMenu()">
+  <button class="share-button" mat-fab #tooltip="matTooltip" [matTooltip]="tooltipText"  [matMenuTriggerFor]="menu"  (click)="openMenu()" matTooltipPosition="above">
     <mat-icon>share</mat-icon>
   </button>
 
-  <mat-menu #menu="matMenu">
+  <mat-menu #menu="matMenu" yPosition="above">
  <a href="https://github.com/erikferreira0403" class="link">
 
   <img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
 
     <button  class="icon-button" mat-menu-item>
-
         Github
-
       </button>
  </a>
   </mat-menu>
