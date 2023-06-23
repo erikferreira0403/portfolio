@@ -13,7 +13,7 @@
   flex-direction: row;
 }
 .icon{
-  width: 2vw;
+  width: 5vw;
   margin-left: 5px;
 }
 
@@ -26,6 +26,6 @@
     width: 20vw;
     height: 20vw;
     transform: translateY(180%);
-  z-index: 9999;
+    z-index: 9999;
   }
  }
