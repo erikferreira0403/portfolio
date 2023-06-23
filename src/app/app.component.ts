@@ -10,7 +10,7 @@ import { PageScrollService } from 'ngx-page-scroll-core';
 
 
 export class AppComponent implements OnInit {
-  title = 'portolioApp';
+  title = 'portfolioApp';
   constructor(private pageScrollService: PageScrollService, @Inject(DOCUMENT) private document: any) {
   }
 
