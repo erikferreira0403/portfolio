@@ -16,6 +16,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatCardModule} from '@angular/material/card';
 import { VideosComponent } from './components/videos/videos.component';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
+import { FloatIconComponent } from './components/shared/float-icon/float-icon.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
     CuriosityComponent,
     AboutComponent,
     ProjectsComponent,
-    VideosComponent
+    VideosComponent,
+    FloatIconComponent
   ],
   imports: [
     BrowserModule,

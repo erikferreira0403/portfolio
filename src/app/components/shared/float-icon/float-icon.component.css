@@ -1,0 +1,21 @@
+.share{
+  position: fixed;
+  left: 20px; /* Ajuste a posição horizontal conforme necessário */
+  top: 50%; /* Ajuste a posição vertical conforme necessário */
+  transform: translateY(180%);
+  z-index: 9999;
+}
+.share-button{
+
+}
+
+@media only screen and (max-width: 600px) {
+  .share{
+    width: 20px;
+    padding: 20px;
+  }
+  .share-button{
+    width: 20vw;
+    height: 20vw;
+  }
+ }

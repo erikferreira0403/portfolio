@@ -7,25 +7,7 @@ import { MatTooltip } from '@angular/material/tooltip';
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css']
 })
-export class AboutComponent implements AfterViewInit {
-  @ViewChild(MatMenuTrigger) menuTrigger!: MatMenuTrigger;
+export class AboutComponent {
 
-  @ViewChild('tooltip') tooltip!: MatTooltip;
-  showTooltip = true;
-  tooltipText = 'Tooltip de Exemplo';
-ngAfterViewInit() {
-    if (this.tooltip) {
-      this.tooltip.show();
-    }
-
-
-  }
-
-  openMenu() {
-    if (this.menuTrigger && this.tooltip) {
-      this.tooltip.hide();
-      this.menuTrigger.openMenu();
-    }
-  }
 
 }

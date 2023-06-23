@@ -1,0 +1,15 @@
+<div class="share">
+  <button class="share-button" mat-fab #tooltip="matTooltip" [matTooltip]="tooltipText" *ngIf="showTooltip" [matMenuTriggerFor]="menu"  (click)="openMenu()">
+    <mat-icon>share</mat-icon>
+  </button>
+
+  <mat-menu #menu="matMenu">
+ <a href="https://github.com/erikferreira0403">
+    <button mat-menu-item>
+
+        github
+
+      </button>
+ </a>
+  </mat-menu>
+  </div>
