@@ -5,9 +5,7 @@
   transform: translateY(70%);
   z-index: 9999;
 }
-.share-button{
 
-}
 .link{
   display: flex;
   flex-direction: row;
