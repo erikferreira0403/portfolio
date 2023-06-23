@@ -13,8 +13,8 @@
   flex-direction: row;
 }
 .icon{
-  width: 5vw;
-  margin-left: 5px;
+  width: 3vw;
+  margin-right: 2px;
 }
 
 @media only screen and (max-width: 760px) {
@@ -28,4 +28,9 @@
     transform: translateY(180%);
     z-index: 9999;
   }
+  .icon{
+    width: 9vw;
+    padding-left: 2px;
+  }
+
  }
