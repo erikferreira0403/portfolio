@@ -22,9 +22,16 @@ ngAfterViewInit() {
   }
 
   openMenu() {
-    if (this.menuTrigger && this.tooltip) {
+    if (this.showTooltip) {
       this.tooltip.hide();
       this.menuTrigger.openMenu();
+      this.showTooltip = !this.showTooltip
+
+    } else if (!this.showTooltip){
+      this.menuTrigger.closeMenu();
+      this.showTooltip = !this.showTooltip
+
+
     }
   }
 
