@@ -47,7 +47,8 @@
     align-content: center;
   }
   .allProjects{
-    width: 100%;
+    margin-top: 30px;
+    width: 85%;
     align-items: center;
     padding-top: 10px;
     display: flex;
