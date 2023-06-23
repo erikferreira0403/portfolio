@@ -12,7 +12,7 @@ export class FloatIconComponent  implements AfterViewInit {
 
   @ViewChild('tooltip') tooltip!: MatTooltip;
   showTooltip = true;
-  tooltipText = 'Tooltip de Exemplo';
+  tooltipText = 'Redes Sociais';
 ngAfterViewInit() {
     if (this.tooltip) {
       this.tooltip.show();
