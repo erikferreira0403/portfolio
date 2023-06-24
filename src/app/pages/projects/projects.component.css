@@ -35,7 +35,9 @@
   margin-top: 2vw;
 
 }
-
+.slider{
+  width: 100%;
+}
 
 @media (max-width: 810px) {
 
@@ -61,6 +63,7 @@
   }
   .project{
     min-width: 80%;
+    max-width: 80%;
   }
 
   .project:not(:last-child) {

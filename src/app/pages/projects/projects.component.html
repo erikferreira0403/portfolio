@@ -6,9 +6,15 @@
     <div class="project" *ngFor="let videos of videoList">
       <mat-card class="project-section  mat-elevation-z6" >
         <mat-card-content>
+          <video width="100%" controls>
+
+          <source [src]="videos.src" type="video/mp4">
+        Seu navegador não suporta a reprodução de vídeos.
+      </video>
+
           <h1><strong>{{videos.title}} </strong></h1>
           <p>{{videos.description | slice:0:100 }}...</p>
-          <button mat-button color="primary" (click)="openModal(videos.title, videos.description)">...Ver mais</button>
+          <button mat-button color="primary" (click)="openModal(videos.src, videos.title, videos.description)">...Ver mais</button>
         </mat-card-content>
       </mat-card>
     </div>
