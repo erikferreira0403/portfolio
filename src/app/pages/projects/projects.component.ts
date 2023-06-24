@@ -31,12 +31,13 @@ export class ProjectsComponent {
 
   constructor(private dialog: MatDialog) {}
 
-  openModal(text: string) {
+  openModal(title: string, description: string) {
    this.dialog.open(VideosComponent, {
     height: '400px',
     width: '600px',
       data: {
-        description: text,
+        description: description,
+        title: title
       }
     });
   }

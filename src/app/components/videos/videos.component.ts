@@ -10,5 +10,5 @@ export class VideosComponent {
 
 
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: {description: any}){}
+  constructor(@Inject(MAT_DIALOG_DATA) public data: {title:any, description: any}){}
 }
