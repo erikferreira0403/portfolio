@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Inject, Input, inject } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-videos',
@@ -6,7 +7,8 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./videos.component.css']
 })
 export class VideosComponent {
-  @Input() videoUrl!: string;
-  @Input() description!: string;
 
+
+
+  constructor(@Inject(MAT_DIALOG_DATA) public data: {description: any}){}
 }

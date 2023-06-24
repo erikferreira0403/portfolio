@@ -3,22 +3,14 @@
   <h1 class="title"> ALGUNS DOS MEUS PROJETOS:</h1>
 
   <div class="allProjects">
-    <div class="project">
-      <mat-card class="project-section  mat-elevation-z6">
+    <div class="project" *ngFor="let videos of videoList">
+      <mat-card class="project-section  mat-elevation-z6" >
         <mat-card-content>
-          <h1><strong>CRUD MVC ASP.NET </strong></h1>
-          <app-videos [videoUrl]="'assets/videos/video2.mp4'" [description]="'Descrição do vídeo 1'"></app-videos>
+          <h1><strong>{{videos.title}} </strong></h1>
+          <button mat-button color="primary" (click)="openModal(videos.description)">...Ver mais</button>
         </mat-card-content>
       </mat-card>
     </div>
-
-    <div class="project">
-      <mat-card class="project-section">
-        <mat-card-content >
-          <h1> <strong>STARS WARS </strong></h1>
-          <app-videos [videoUrl]="'assets/videos/video2.mp4'" [description]="'Descrição do vídeo 2'"></app-videos>
-        </mat-card-content>
-      </mat-card>'
-    </div>
   </div>
-</div>
+
+

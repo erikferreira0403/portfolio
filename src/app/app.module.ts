@@ -17,6 +17,7 @@ import {MatCardModule} from '@angular/material/card';
 import { VideosComponent } from './components/videos/videos.component';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { FloatIconComponent } from './components/shared/float-icon/float-icon.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { FloatIconComponent } from './components/shared/float-icon/float-icon.co
     MatButtonModule,
     MatTooltipModule,
     MatCardModule,
-    NgxPageScrollCoreModule
+    NgxPageScrollCoreModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
