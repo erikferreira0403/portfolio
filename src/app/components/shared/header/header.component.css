@@ -1,13 +1,8 @@
-html {
-  scroll-behavior: smooth;
-}
-
 .nav{
   position: fixed;
   background-color: #495464;
-  height: 60px;
+  height: 3vw;
   width: 100%;
-  display: flex;
   align-items: center;
   justify-content: space-around;
   padding: 40px;
@@ -17,12 +12,11 @@ html {
 
 .title {
   justify-self: left;
-
   width: 50%;
-  color: white;
   display: flex;
-  flex-direction: row;
   padding-top: 20px;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.786); /* Para navegadores baseados em WebKit */
+  color: black;
    }
    .link{
     justify-content: right;
@@ -42,5 +36,10 @@ html {
       font-size: 4vw;
       line-height: 1.1;
      }
+     .nav{
+      height: 2vw;
+      display: flex;
+      flex-direction: row;
+    }
 
    }
