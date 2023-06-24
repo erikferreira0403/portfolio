@@ -7,6 +7,7 @@
       <mat-card class="project-section  mat-elevation-z6" >
         <mat-card-content>
           <h1><strong>{{videos.title}} </strong></h1>
+          <p>{{videos.description | slice:0:100 }}...</p>
           <button mat-button color="primary" (click)="openModal(videos.description)">...Ver mais</button>
         </mat-card-content>
       </mat-card>
