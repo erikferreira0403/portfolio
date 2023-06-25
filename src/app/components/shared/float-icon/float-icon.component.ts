@@ -44,8 +44,8 @@ ngAfterViewInit() {
   }
 openDialog(link: string, title:string): void {
   this.dialog.open(SeuModalComponent, {
-    width: '200px',
-    height:` 100px`,
+    width: '80%',
+    height:` 15%`,
     data: { link: link, title: title }
   });
 }
@@ -59,18 +59,19 @@ openDialog(link: string, title:string): void {
     template: `
     <div class="container">
       <h3>Deseja ir para o {{data.title}}?</h3>
+      <div>
       <a [href]="data.link">
+
       <button mat-button color="primary" >Sim</button>
       </a>
       <button mat-button color="primary"(click)="closeModal()">Não</button>
+      </div>
     </div>
     `,
       standalone: true,
 
      imports: [MatDialogModule, MatButtonModule],
-     styles: ['.container { padding: 10px }']
-
-
+     styles: ['.container { padding: 10px; align-items: center; display: flex; flex-wrap: wrap; justify-content: space-around; flex-direction: column; }']
   })
   export class SeuModalComponent {
 
