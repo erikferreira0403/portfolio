@@ -6,12 +6,11 @@
     <div class="project" *ngFor="let videos of videoList">
       <mat-card class="project-section  mat-elevation-z6" >
         <mat-card-content>
-          <video width="100%" controls>
 
-          <source [src]="videos.src" type="video/mp4">
-        Seu navegador não suporta a reprodução de vídeos.
-      </video>
-      <img src="../../assets/img/image1.jpg" alt="">
+          <video width="100%" controls>
+            <source [src]="videos.src" type="video/mp4">
+            Seu navegador não suporta a reprodução de vídeos.
+          </video>
 
           <h1><strong>{{videos.title}} </strong></h1>
           <p>{{videos.description | slice:0:100 }}...</p>
