@@ -44,8 +44,8 @@ ngAfterViewInit() {
   }
 openDialog(link: string, title:string): void {
   this.dialog.open(SeuModalComponent, {
-    width: '80%',
-    height:` 15%`,
+    width: `400px`,
+    height:` 100px`,
     data: { link: link, title: title }
   });
 }
@@ -71,7 +71,7 @@ openDialog(link: string, title:string): void {
       standalone: true,
 
      imports: [MatDialogModule, MatButtonModule],
-     styles: ['.container { padding: 10px; align-items: center; display: flex; flex-wrap: wrap; justify-content: space-around; flex-direction: column; }']
+     styles: ['.container { padding-top:10px; align-items: center; display: flex; flex-wrap: wrap; justify-content: space-around; flex-direction: column; }']
   })
   export class SeuModalComponent {
 
