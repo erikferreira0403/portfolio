@@ -12,11 +12,13 @@
 }
 .icon{
   width: 3vw;
-  margin-right: 2px;
+  height: 3vw;
+  padding-left: 4px;
+
 }
 .shareIcon{
   width: 4vw;
-  margin-right: 4px;
+  padding-left: 4px;
 }
 .share-button{
   width: 6vw;
@@ -37,12 +39,13 @@
     z-index: 9999;
   }
   .icon{
-    width: 9vw;
+    width: 10vw;
+    height: 10vw;
+    padding-top: 5px;
     padding-left: 2px;
   }
 
   .shareIcon{
     width: 11vw;
-    margin-right: 4px;
   }
  }
