@@ -6,13 +6,9 @@
     <div class="project" *ngFor="let  videos of videoList">
       <mat-card class="project-section  mat-elevation-z6" >
         <mat-card-content>
-
           <div >
             <iframe class="video" width="400" height="215" [src]='getSafeUrl(videos.src)' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
-
-
-
 
           <h1><strong>{{videos.title}} </strong></h1>
           <p>{{videos.description | slice:0:100 }}...</p>
