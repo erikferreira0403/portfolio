@@ -18,6 +18,15 @@
 }
 .project{
     margin-bottom: 7vw;
+    transform: translateY(-10px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+.project:hover{
+  z-index: 9999;
+
+  cursor: pointer;
+  transform: scale(1.1);
+  transform-origin: center;
 }
 .project-section{
   height: 400px;
