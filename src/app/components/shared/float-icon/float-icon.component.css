@@ -22,6 +22,9 @@
   transform-origin: top right;
   transform: translate(0, 10px);
 }
+.menu{
+  margin-bottom: 20px;
+}
 .shareIcon{
   width: 4vw;
   padding-left: 4px;

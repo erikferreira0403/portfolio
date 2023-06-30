@@ -2,7 +2,7 @@
   <button class="share-button" mat-fab #tooltip="matTooltip" [matTooltip]="tooltipText"  [matMenuTriggerFor]="menu"  (click)="openMenu()" matTooltipPosition="above">
     <mat-icon class="shareIcon">share</mat-icon>
   </button>
-
+<div>
   <mat-menu #menu="matMenu" yPosition="above" class="mat-menu-panel">
     <a (click)="openDialog('https://github.com/erikferreira0403', 'Github')" class="link">
 
@@ -21,4 +21,6 @@
 
 
   </mat-menu>
+</div>
+
   </div>
