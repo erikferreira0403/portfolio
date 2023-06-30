@@ -79,6 +79,11 @@
   .title{
     font-size: 4vw;
   }
+  .video{
+    min-width: 80%;
+    height: 80%;
+    width: 100%;
+  }
 }
 
 
