@@ -34,7 +34,7 @@ export class ProjectsComponent implements OnInit {
   constructor(private dialog: MatDialog, private sanitizer: DomSanitizer) {}
   ngOnInit(): void {
 
-      this.safeUrl =  this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/CJDM7JezsE8?controls=0');
+      this.safeUrl =  this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/CJDM7JezsE8');
      }
 
 
