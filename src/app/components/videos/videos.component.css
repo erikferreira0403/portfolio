@@ -12,3 +12,14 @@
   width: '500px';
   padding: 10px;
 }
+
+@media (max-width: 810px) {
+
+  .video{
+    min-width: 80%;
+    height: 80%;
+    width: 100%;
+  }
+}
+
+
