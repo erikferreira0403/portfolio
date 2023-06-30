@@ -1,5 +1,5 @@
 .share{
-  position: fixed;
+  position: fixed !important;
   left: 20px; /* Ajuste a posição horizontal conforme necessário */
   top: 50%; /* Ajuste a posição vertical conforme necessário */
   transform: translateY(70%);
@@ -18,10 +18,7 @@
   padding-left: 4px;
 
 }
-.mat-menu-panel {
-  transform-origin: top right;
-  transform: translate(0, 10px);
-}
+
 .menu{
   margin-bottom: 20px;
 }
@@ -38,11 +35,11 @@
 
 @media only screen and (max-width: 760px) {
   .share{
-    position: fixed;
-    left: 0;
+    position: fixed  !important;
+    left: 0 !important;
     width: 20px;
     padding: 20px;
-    z-index: 9999;
+    z-index: 9999 !important;
   }
   .share-button{
     width: 20vw;
