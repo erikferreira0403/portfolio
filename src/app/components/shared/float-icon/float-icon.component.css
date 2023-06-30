@@ -38,9 +38,11 @@
 
 @media only screen and (max-width: 760px) {
   .share{
+    position: fixed;
     left: 0;
     width: 20px;
     padding: 20px;
+    z-index: 9999;
   }
   .share-button{
     width: 20vw;
