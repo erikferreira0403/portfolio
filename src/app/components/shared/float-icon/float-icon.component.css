@@ -18,6 +18,9 @@
   padding-left: 4px;
 
 }
+.mat-menu-panel{
+  position: fixed;
+}
 
 .menu{
   margin-bottom: 20px;
@@ -60,8 +63,7 @@
   .iconButton{
     padding-top:5vw;
   }
-  .mat-menu-panel {
-    transform-origin: top right;
-    transform: translate(0, 10px);
+  .mat-menu-panel{
+    position: fixed;
   }
 }
