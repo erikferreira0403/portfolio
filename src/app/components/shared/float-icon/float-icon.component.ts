@@ -1,9 +1,10 @@
 import { AfterViewInit, Component, Inject, ViewChild } from '@angular/core';
-import { MatMenuTrigger } from '@angular/material/menu';
+import { MAT_MENU_SCROLL_STRATEGY, MatMenuTrigger } from '@angular/material/menu';
 import { MatTooltip } from '@angular/material/tooltip';
 import {MatDialog, MatDialogRef, MatDialogModule, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { Dialog } from '@angular/cdk/dialog';
+import { BlockScrollStrategy, Overlay, RepositionScrollStrategy } from '@angular/cdk/overlay';
 
 
 @Component({
@@ -51,7 +52,21 @@ openDialog(link: string, title:string): void {
 }
 }
 
+const isToucheDevice = () => {
+  try {
+    document.createEvent('TouchEvent');
+    return true;
+  } catch (e) {
+    return false;
+  }
+};
+const scrollBlockFactory = (overlay: Overlay): () => BlockScrollStrategy  => {
+  return () => overlay.scrollStrategies.block();
+};
 
+const scrollRepositionFactory = (overlay: Overlay): () => RepositionScrollStrategy  => {
+  return () => overlay.scrollStrategies.reposition();
+};
 
 
   @Component({
@@ -71,7 +86,10 @@ openDialog(link: string, title:string): void {
       standalone: true,
 
      imports: [MatDialogModule, MatButtonModule],
-     styles: ['.container { padding-top:10px; align-items: center; display: flex; flex-wrap: wrap; justify-content: space-around; flex-direction: column; }']
+     styles: ['.container { padding-top:10px; align-items: center; display: flex; flex-wrap: wrap; justify-content: space-around; flex-direction: column; }'],
+     providers: [
+      { provide: MAT_MENU_SCROLL_STRATEGY, useFactory: isToucheDevice() ? scrollBlockFactory : scrollRepositionFactory, deps: [Overlay] }
+    ]
   })
   export class SeuModalComponent {
 
