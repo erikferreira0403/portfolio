@@ -9,6 +9,11 @@
   z-index: 9999;
 
 }
+.link.active{
+font-weight: bolder;
+font-size: 25px;
+}
+
 
 .title {
   justify-self: left;
@@ -24,6 +29,10 @@
       text-decoration: none;
       color: white;
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      transition: opacity 0.3s, transform 0.3s;
+      transform-origin: center;
+
+
   }
 
   @media only screen and (max-width: 600px) {
@@ -31,7 +40,7 @@
        font-size: 4vw; /* O tamanho do texto será 4% da largura da viewport */
      }
      .link, .title {
-      
+
       font-size: 4vw;
       line-height: 1.1;
      }
