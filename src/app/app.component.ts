@@ -1,4 +1,4 @@
-import { Inject, OnInit } from '@angular/core';
+import { HostListener, Inject, OnInit } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { Component } from '@angular/core';
 import { PageScrollService } from 'ngx-page-scroll-core';
@@ -10,15 +10,24 @@ import { PageScrollService } from 'ngx-page-scroll-core';
 
 
 export class AppComponent implements OnInit {
+  public getScreenWidth: any;
+  public getScreenHeight: any;
+
   title = 'portfolioApp';
-  constructor(private pageScrollService: PageScrollService, @Inject(DOCUMENT) private document: any) {
+  constructor() {
   }
 
   ngOnInit(): void {
-    this.pageScrollService.scroll({
-      document: this.document,
-      scrollTarget: '.theEnd',
-    });
+
+
+    this.getScreenWidth = window.innerWidth;
+      this.getScreenHeight = window.innerHeight;
    }
+   @HostListener('window:resize', ['$event'])
+  onWindowResize() {
+    this.getScreenWidth = window.innerWidth;
+    this.getScreenHeight = window.innerHeight;
+  }
+  
 
 }
