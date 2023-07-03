@@ -4,6 +4,7 @@
   top: 50%; /* Ajuste a posição vertical conforme necessário */
   transform: translateY(70%);
   z-index: 9999;
+  margin-bottom: buttonOffset;
 }
 
 .link{
@@ -35,6 +36,15 @@
   transform: translateY(200%);
   z-index: 9999;
 }
+
+.button-with-offset {
+  transition: 0.18s ease-out;
+}
+
+.button-with-offset.offset-applied {
+  transform: translateY(-50%);
+}
+
 
 @media only screen and (max-width: 760px) {
   .share{

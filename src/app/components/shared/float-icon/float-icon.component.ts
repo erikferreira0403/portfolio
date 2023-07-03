@@ -5,6 +5,8 @@ import {MatDialog, MatDialogRef, MatDialogModule, MAT_DIALOG_DATA} from '@angula
 import { MatButtonModule } from '@angular/material/button';
 import { Dialog } from '@angular/cdk/dialog';
 import { BlockScrollStrategy, Overlay, RepositionScrollStrategy } from '@angular/cdk/overlay';
+import { MatBottomSheet, MatBottomSheetRef } from '@angular/material/bottom-sheet';
+import { MatListModule } from '@angular/material/list';
 
 
 @Component({
@@ -20,14 +22,33 @@ export class FloatIconComponent  implements AfterViewInit {
   tooltipText = ' Redes Sociais';
   textoCompleto= '';
   title = '';
-  constructor(public dialog: MatDialog) {}
+  bottomSheetOpen = false;
+  buttonOffset = 0;
+  bottomSheetRef: any;
+
+
+  constructor(public dialog: MatDialog,private _bottomSheet: MatBottomSheet) {}
+
+
+  openBottomSheet(): void {
+    if (this.bottomSheetOpen) {
+      this._bottomSheet.dismiss();
+      this.bottomSheetRef = null;
+      this.buttonOffset = 0;
+    } else {
+      this._bottomSheet.open(BottomSheetOverviewExampleSheet);
+      this.buttonOffset = -1000; // ou utilize a variável buttonOffset aqui
+    }
+
+    this.bottomSheetRef.afterDismissed().subscribe(() => {
+      this.buttonOffset = 0;
+    });
+  }
 
 ngAfterViewInit() {
     if (this.tooltip) {
       this.tooltip.show();
-    }
-
-
+    } 
   }
 
   openMenu() {
@@ -52,21 +73,74 @@ openDialog(link: string, title:string): void {
 }
 }
 
-const isToucheDevice = () => {
-  try {
-    document.createEvent('TouchEvent');
-    return true;
-  } catch (e) {
-    return false;
-  }
-};
-const scrollBlockFactory = (overlay: Overlay): () => BlockScrollStrategy  => {
-  return () => overlay.scrollStrategies.block();
-};
 
-const scrollRepositionFactory = (overlay: Overlay): () => RepositionScrollStrategy  => {
-  return () => overlay.scrollStrategies.reposition();
-};
+@Component({
+  selector: 'bottom-sheet-overview-example-sheet',
+  template: `
+  <mat-nav-list class="nav">
+ <a class="link" (click)="openDialog('https://github.com/erikferreira0403', 'Github')" mat-list-item (click)="openLink($event)">
+    <img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
+
+     <span matListItemTitle>Github</span>
+     <span matLine>Visite meu Github!</span>
+
+  </a>
+
+
+ <a class="link" (click)="openDialog('https://api.whatsapp.com/send?phone=5585985501959&text=Olá!%20Encontrei%20seu%20site%20na%20Internet%20e%20preciso%20de%20seus%20serviços.', 'Whatsapp')" mat-list-item (click)="openLink($event)">
+   <img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADKklEQVR4nO2aTWxNQRTHfxQtKUoUC6HxsSA2EgtrQYOKRoTSjZ34qNKljaQrXwuNRImkCwsaYuH5ShcICxGxsdHPSCkRaSMRi6piZJIjeXmZuW/m3tt5N03/yUle8u793/N/c+bMOec+mMLkxQKgHrgAPAR6gG/AmJj+3C3f6Wt2A1VkBOVAI9AF/AaUp+l7HgMHhSs4ZgMtwOcYztvsE3ASqAglYjswkKKAQusHaidSgF76tgkUUGg3ZOVTxRLgTUARSuw1sDgtETWy3KpE1ic+JEK1pFFVYhsAlsYVUVGicFIRYRYrRbdnwHlVYJfjpFiVUdvmKkIvX28GHFYW63c9NFscCX8BJ4A5wHRgK/AnkJhml9VwLTsOG+7PBRIyVGzjNzoSPbfcXxswxA5ECelyJNlvuX9awP31KKqfcC3FV0f8GM2BhIwD80wO1HuQRMVnlSSCEGJ2mRy46EGgSxcbVgF/Awk5b3LggQfBTouImcDTQCIUcN/kRJ8Hwe2MlDU9JidGPAj0Hlhu4HgWWMiwSciYJ0mngWMtMBpQyE+TkDgO7DHwHC21kC8xiPSsaoWBq62UofUuJtlbYK7hhC+WzgcTzMOUmB74JUq/haanh2WW2u2H4XqdWFbmnTvtMUM7ZxLSmnCZO6ScL8Qy4GZeia9Li82G63RPfhb47vHMc0lLlKhZlD4UTVgjJ/Fey/f517k+r85EMF+yQFIxT4CFxMcij7PMWDSm2RgNWsLHBTscn6H3dOLGysV04Xhd9ogP7jnyN0SR6Pj+kKIYJeF6BdhYRIBuDa46cn4EZhX7RY6lLCTf9Fl1GtggQ4tKGYceAd578DS5LG3NBApJq+ItdxFyKAPOqoh9twVH3MqAw8pil1xFlHn2JSHtlcsG/49NGXBYWV4r6JdNzjiTAadVgfVaWoVIvMxgOFX7ivAZ0IWwa3Ff7OzLgPNKzgnnFGtCh2NreVdeJ5yS4jAtAbrsaErjHxBDBvKvwB3gOLBeWth8zJCpeC5mhzcuVWyDT2othhcygOiU2medwfEoVEpz1ioVbLfwjcqoaURqrZx0dnWGXn8KTBb8A31C/2cT3/wMAAAAAElFTkSuQmCC">
+
+    <span   matListItemTitle>Whatsapp</span>
+    <span   matLine>Entre em contato comigo pelo whatsapp!</span>
+
+  </a>
+</mat-nav-list>`,
+  standalone: true,
+  imports: [MatListModule],
+  styles: [`
+
+.link{
+
+
+}
+.icon{
+  width: 3vw;
+  height: 3vw;
+  padding-left: 8px;
+
+}
+@media only screen and (max-width: 760px) {
+
+  .icon{
+    width: 7vw;
+    height: 7vw;
+
+  }
+  .link{
+    line-height: 100;
+}
+
+}
+  `]
+})
+
+export class BottomSheetOverviewExampleSheet {
+  constructor(private _bottomSheetRef: MatBottomSheetRef<BottomSheetOverviewExampleSheet>, public dialog: MatDialog) {}
+
+  openLink(event: MouseEvent): void {
+    this._bottomSheetRef.dismiss();
+    event.preventDefault();
+
+  }
+
+  openDialog(link: string, title:string): void {
+    this.dialog.open(SeuModalComponent, {
+      width: `400px`,
+      height:` 100px`,
+      data: { link: link, title: title }
+    });
+  }
+}
 
 
   @Component({
@@ -88,7 +162,7 @@ const scrollRepositionFactory = (overlay: Overlay): () => RepositionScrollStrate
      imports: [MatDialogModule, MatButtonModule],
      styles: ['.container { padding-top:10px; align-items: center; display: flex; flex-wrap: wrap; justify-content: space-around; flex-direction: column; }'],
      providers: [
-      { provide: MAT_MENU_SCROLL_STRATEGY, useFactory: isToucheDevice() ? scrollBlockFactory : scrollRepositionFactory, deps: [Overlay] }
+
     ]
   })
   export class SeuModalComponent {

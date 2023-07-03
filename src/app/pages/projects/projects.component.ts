@@ -16,7 +16,6 @@ interface MeuObjeto {
 })
 export class ProjectsComponent implements OnInit {
   @Input() videoUrl!: string;
-  isModalOpen = false;
   textoCompleto!: string;
   dialogRef!: MatDialogRef<any>;
   isVideoLoading: boolean = true;
