@@ -35,15 +35,19 @@
   height: 6vw;
   transform: translateY(200%);
   z-index: 9999;
+  background-color: #90b8f8;
 }
 
 .button-with-offset {
-  transition: 0.18s ease-out;
+  transition: 0.18s ;
 }
 
 .button-with-offset.offset-applied {
   transform: translateY(-50%);
+  transition: 0.18s ;
+
 }
+
 
 
 @media only screen and (max-width: 760px) {
