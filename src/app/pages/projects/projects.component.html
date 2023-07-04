@@ -10,8 +10,10 @@
           <div >
             <iframe class="video" width="400" height="215" [src]='getSafeUrl(videos.src)' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
+
+          PRA CONSEGUIR USAR AS IMAGENS EU TIVE QUE MUDAR O DIRETORIO LA NO /DOCS, ONDE PUXA A IMAGEM
 -->
-          <img   width="400" height="215" [src]='videos.img' alt="">
+          <img  class="video" width="400" height="215" [src]='videos.img' alt="">
           <h1><strong>{{videos.title}} </strong></h1>
           <p>{{videos.description | slice:0:100 }}...</p>
           <button mat-button color="primary" (click)="openModal(videos.src, videos.title, videos.description)">...Clique para ver mais</button>
