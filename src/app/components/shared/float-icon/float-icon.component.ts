@@ -115,7 +115,7 @@ openDialog(link: string, title:string): void {
   width: 100%;
 }
 .linkLine{
-  padding-top:10px
+  padding:10px 0 0 4px;
 }
 .icon{
   width: 3vw;
