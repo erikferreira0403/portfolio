@@ -36,6 +36,7 @@
   transform: translateY(200%);
   z-index: 9999;
   background-color: #90b8f8;
+  opacity: 0.9;
 }
 
 .button-with-offset {
