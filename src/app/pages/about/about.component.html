@@ -7,35 +7,87 @@
 
 
 
+  <mat-stepper class="steeper">
+    <mat-step label="Skills" state="phone" class="step">
+
+      <h3 class="skills">Minha Stack contém:</h3>
+
+      <div class="skillsContainers">
 
 
 
-  <h3 class="skills">Minha Stack contém:</h3>
 
-  <div class="skillsContainers">
-
-    <img  matTooltip="HTML" class="svg" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
-
-    <img  matTooltip="CSS" class="svg" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
+      <!--
 
 
-    <img matTooltip="Javascript" class="svg" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+        -->
+        <h3>
+          - Linguagens de programação: C#, Typescript e Javascript <br>
+          - Frameworks: Angular 11+, .NET 5+ <br>
+          - UI Frameworks: Angular Material UI, Bootstrap e Clarity Design <br>
+          - Ferramentas: Docker, GitLab, RabbitMq, JIRA, TFS, Postman e Docker <br>
+          - Banco de dados: SQL Server e MongoDB
+        </h3>
 
-    <img matTooltip="Typescript" class="svg" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" />
 
-    <img matTooltip="Csharp" class="svg" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" />
-  </div>
+<div class="skillsC">
+     <img  matTooltip="HTML" class="svg" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
 
-  <div class="skillsContainers">
-    <img matTooltip="Angular" class="svg" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" />
+        <img  matTooltip="CSS" class="svg" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
 
 
-    <img matTooltip="Docker" class="svg"src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" />
+        <img matTooltip="Javascript" class="svg" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
 
-    <img matTooltip="MSSQL Server" class="svg"src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" />
+        <img matTooltip="Typescript" class="svg" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" />
 
-    <img matTooltip="Git" class="svg" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
-  </div>
+        <img matTooltip="Csharp" class="svg" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" />
+     
+
+
+        <img matTooltip="Angular" class="svg" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" />
+
+
+        <img matTooltip="Docker" class="svg"src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" />
+
+        <img matTooltip="MSSQL Server" class="svg"src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" />
+
+        <img matTooltip="Git" class="svg" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
+
+        </div>
+
+
+
+
+      </div>
+    </mat-step>
+
+    <mat-step label="Educação" state="chat" class="step">
+      <h3>Ensino Médio Técnico em Redes De Computadores - Concluído <br> EEEP Leonel de Moura
+        Brizola.</h3>
+        -
+      <h3>Tecnólogo em Análise e Desenvolvimento De Sistemas - Em Andamento - Previsão de
+        conclusão 2024.1 <br> Universidade Estácio de Sá.</h3>
+
+    </mat-step>
+
+    <mat-step label="Experiência" class="step">
+        <h3>INSTITUTO ATLÂNTICO <br>
+          CARGO: ESTAGIÁRIO DE DESENVOLVIMENTO DE SISTEMAS <br>
+          DURAÇÃO: 10/06/2022 - 10/03/2023</h3>
+          -
+          <h3>INSTITUTO ATLÂNTICO <br>
+            CARGO: ESTAGIÁRIO ANALISTA DE SUPORTE E INFRAESTRUTURA <br>
+            DURAÇÃO: 10/03/2021 - 09/06/2022</h3>
+    </mat-step>
+
+    <!-- Icon overrides. -->
+    <ng-template matStepperIcon="phone">
+      <mat-icon>call_end</mat-icon>
+    </ng-template>
+    <ng-template matStepperIcon="chat">
+      <mat-icon>forum</mat-icon>
+    </ng-template>
+  </mat-stepper>
+
+
 </div>
-
-<app-curiosity></app-curiosity>

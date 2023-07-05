@@ -20,6 +20,7 @@ import { FloatIconComponent } from './components/shared/float-icon/float-icon.co
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 import {MatListModule} from '@angular/material/list';
+import {MatStepperModule} from '@angular/material/stepper';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import {MatListModule} from '@angular/material/list';
     NgxPageScrollCoreModule,
     MatDialogModule,
     MatBottomSheetModule,
-    MatListModule
+    MatListModule,
+    MatStepperModule
    ],
   providers: [],
   bootstrap: [AppComponent]
