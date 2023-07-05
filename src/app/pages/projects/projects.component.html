@@ -15,7 +15,7 @@
 -->
           <img  class="video" width="400" height="215" [src]='videos.img' alt="">
           <h1><strong>{{videos.title}} </strong></h1>
-          <p>{{videos.description | slice:0:100 }}...</p>
+          <p>{{videos.description | slice:0:80 }}...</p>
           <button mat-button color="primary" (click)="openModal(videos.src, videos.title, videos.description)">...Clique para ver mais</button>
         </mat-card-content>
       </mat-card>
