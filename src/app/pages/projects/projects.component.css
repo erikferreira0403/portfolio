@@ -28,11 +28,12 @@
   transform-origin: center;
 }
 .project-section{
-  height: 400px;
+  height: 420px;
   width: 430px;
   border: 5px;
   border-color: black;
 }
+
 
 .allProjects{
   width: 100%;
@@ -46,6 +47,10 @@
 .slider{
   width: 100%;
 }
+.button-raised{
+  margin-left: 4px;
+}
+
 
 @media (max-width: 810px) {
 
@@ -97,6 +102,9 @@
   }
   html {
     height: -webkit-fill-available;
+  }
+  .button-raised{
+    margin-top: 4px;
   }
 
 }
