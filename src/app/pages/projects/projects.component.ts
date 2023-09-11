@@ -26,7 +26,7 @@ export class ProjectsComponent implements OnInit {
 
    videoList: MeuObjeto[] = [
      {src:'/../../../assets/img/cadastrousuarios.mp4',
-     deploysrc:'',
+     deploysrc:'https://64ff325aecfe83154f5869c5--lucky-cucurucho-9d47ff.netlify.app',
     img: '/../../../assets/img/cadastrousuariosimage.jpg',
      title: 'CRUD Usuários (Full-Stack)',
       description : 'Projeto Full-Stack, criando uma API utilizando .Net 5, com Front-end em Angular 14, e SQLite como banco de dados, onde tive a ideia de realizar um aplicação que permita um trabalho em equipe, começando pelo gerenciamento de usuários que vão ter acesso a aplicação. '},
@@ -63,7 +63,7 @@ export class ProjectsComponent implements OnInit {
    getSafeUrl(videoLink: string) {
     return this.sanitizer.bypassSecurityTrustResourceUrl(videoLink + "?controls=0");
   }
-  
+
   openDialog(link: string, title:string): void {
     this.dialog.open(SeuModalComponent, {
       width: `400px`,

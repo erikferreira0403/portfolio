@@ -19,7 +19,7 @@
           <button mat-raised-button (click)="openModal(videos.src, videos.title, videos.description)">...Clique para ver mais</button>
 
           <a *ngIf="videos.deploysrc">
-            <button button mat-raised-button color="primary" class="button-raised"  (click)="openDialog('https://soft-speculoos-8316a2.netlify.app/#/', 'Projeto')">Ir para o projeto</button>
+            <button button mat-raised-button color="primary" class="button-raised"  (click)="openDialog(videos.deploysrc, 'Projeto')">Ir para o projeto</button>
           </a>
         </mat-card-content>
       </mat-card>
