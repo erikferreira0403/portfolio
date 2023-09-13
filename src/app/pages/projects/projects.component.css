@@ -1,3 +1,4 @@
+/*
 .container{
   width: 100%;
   align-items: center;
@@ -40,7 +41,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-bottom: 10vw; /* Espaçamento inferior entre os cards */
+  margin-bottom: 10vw; /* Espaçamento inferior entre os cards
   margin-top: 3vw;
 
 }
@@ -85,7 +86,6 @@
 
   .project-section{
     width: 100%;
-    /* Ajuste o tamanho do card conforme necessário */
   }
 
   .title{
@@ -110,3 +110,97 @@
 }
 
 
+
+*/
+
+.container {
+  padding-top: 10px;
+
+  width: 100%;
+  color: black;
+  align-items: center;
+  justify-content: space-evenly;
+
+}
+
+.introduce {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2vw 0 0 0;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  transition: opacity 0.3s, transform 0.3s;
+
+}
+
+.feature-section {
+  margin: 4vw 0 10vw 0;
+}
+
+.background-image {
+  background-repeat: no-repeat;
+  margin: 8px 0 40px 0;
+  width: 30vw;
+  height: 30vw;
+}
+
+.feature-description{
+  font-size: 1vw;
+}
+.video{
+  transition: opacity 0.3s, transform 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.feature:hover{
+  z-index: 2;
+  cursor: pointer;
+  transform: scale(1.1);
+  transform-origin: center;
+}
+
+@media (max-width: 810px) {
+  .container{
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+  .feature{
+    margin: 7px 7px 7px 7px;
+  }
+  .feature-title {
+    margin-left: 1vw;
+    font-size: 5vw;
+  }
+  .feature-description{
+    margin: 2px 7px 7px 7px;
+    font-size: 3vw;
+  }
+
+  .video{
+    min-width: 60%;
+    min-height: 30%;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .feature:hover{
+    z-index: 2;
+    cursor: pointer;
+    transform: scale(0.9);
+    transform-origin: center;
+  }
+}

@@ -1,4 +1,4 @@
-
+<!--
 <div class="container ">
   <h1 class="title"> ALGUNS DOS MEUS PROJETOS:</h1>
 
@@ -6,13 +6,13 @@
     <div class="project" *ngFor="let  videos of videoList">
       <mat-card class="project-section  mat-elevation-z6" >
         <mat-card-content>
-          <!--
+
           <div >
             <iframe class="video" width="400" height="215" [src]='getSafeUrl(videos.src)' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
 
           PRA CONSEGUIR USAR AS IMAGENS EU TIVE QUE MUDAR O DIRETORIO LA NO /DOCS, ONDE PUXA A IMAGEM
--->
+
           <img (click)="openModal(videos.src, videos.title, videos.description)" class="video" width="400" height="215" [src]='videos.img' alt="">
           <h1><strong>{{videos.title}} </strong></h1>
           <p>{{videos.description | slice:0:80 }}...</p>
@@ -25,5 +25,44 @@
       </mat-card>
     </div>
   </div>
+-->
 
+<div class="container">
+  <div class="introduce">
+    <div class="introduce-title">
+      <h1>-</h1>
+    </div>
+    <div class="introduce-phrase"><h1>Meus principais projetos</h1>
+    </div>
+    <mat-icon class="introduce-title">keyboard_arrow_down</mat-icon>
+  </div>
+
+  <div class="features">
+    <div class="project" *ngFor="let  videos of videoList">
+
+      <div class="feature">
+        <div class="feature-section">
+          <h1 class="feature-title">{{videos.title}}</h1>
+          <p class="feature-description">{{videos.description | slice:0:80 }}...</p>
+
+          <hr>
+          <button mat-raised-button (click)="openModal(videos.src, videos.title, videos.description)">...Clique para ver
+            mais</button>
+
+          <a *ngIf="videos.deploysrc">
+            <button button mat-raised-button color="primary" class="button-raised"
+              (click)="openDialog(videos.deploysrc, 'Projeto')">Ir para o projeto</button>
+          </a>
+        </div>
+        <div>
+          <img (click)="openModal(videos.src, videos.title, videos.description)" class="video" width="400" height="215"
+            [src]='videos.img' alt="">
+
+        </div>
+        <mat-divider></mat-divider>
+      </div>
+
+    </div>
+  </div>
+</div>
 

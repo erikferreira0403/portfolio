@@ -26,10 +26,15 @@ export class ProjectsComponent implements OnInit {
 
    videoList: MeuObjeto[] = [
      {src:'/../../../assets/img/cadastrousuarios.mp4',
-     deploysrc:'https://64ff325aecfe83154f5869c5--lucky-cucurucho-9d47ff.netlify.app',
+     deploysrc:'https://cute-genie-a97430.netlify.app',
     img: '/../../../assets/img/cadastrousuariosimage.jpg',
-     title: 'CRUD Usuários (Full-Stack)',
+     title: 'Colaborative Task Manager (Full-Stack)',
       description : 'Projeto Full-Stack, criando uma API utilizando .Net 5, com Front-end em Angular 14, e SQLite como banco de dados, onde tive a ideia de realizar um aplicação que permita um trabalho em equipe, começando pelo gerenciamento de usuários que vão ter acesso a aplicação. '},
+      {src:'',
+      deploysrc:'https://lucky-cucurucho-9d47ff.netlify.app',
+    img: '/../../../assets/img/site.jpg',
+     title: ' Colaborative Task Manager Page (Front-End)',
+      description : 'Landing Page criada para o Colaborative Task Manager usando Angular, Typescript e CSS'},
       {src:'/../../../assets/img/crudmvcvideo.mp4',
       deploysrc:'',
     img: '/../../../assets/img/crudmvc.jpg',
@@ -39,7 +44,7 @@ export class ProjectsComponent implements OnInit {
     deploysrc:'https://soft-speculoos-8316a2.netlify.app/#/',
     img:'/../../../assets/img/starwars.jpg',
      title: 'STARS WARS (Front-End)',
-     description : 'Um frontend em Angular 14 consumindo a Star Wars API'}];
+     description : 'Um frontend em Angular 14 consumindo a Star Wars API, Angular Material e Font Awesome'}];
 //<iframe width="560" height="315" src="https://www.youtube.com/embed/CJDM7JezsE8?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
   constructor(private dialog: MatDialog, private sanitizer: DomSanitizer) {}
