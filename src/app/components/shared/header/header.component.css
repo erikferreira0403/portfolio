@@ -1,6 +1,5 @@
 .nav{
   position: fixed;
-  background-color: #495464;
   height: 3vw;
   width: 100%;
   align-items: center;
@@ -11,7 +10,6 @@
 }
 .link.active{
 font-weight: bolder;
-color:  #90b8f8;
 }
 
 
@@ -27,12 +25,34 @@ color:  #90b8f8;
     justify-content: right;
       margin-left: 20px;
       text-decoration: none;
-      color: white;
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       transition: opacity 0.3s, transform 0.3s;
       transform-origin: center;
 
 
+  }
+
+  a {
+    color: #060606;
+    line-height: 2;
+    position: relative;
+  }
+
+  a::before {
+    content: '';
+    width: 0;
+    height: 2px;
+    border-radius: 4px;
+    background-color: #121111;
+    position: absolute;
+    bottom: -.25rem;
+    left: 50%;
+    transition: width .4s, left .4s;
+  }
+
+  a:hover::before {
+    width: 100%;
+    left: 0;
   }
 
   @media only screen and (max-width: 600px) {
