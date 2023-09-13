@@ -3,7 +3,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
   flex-direction: column;
   padding: 50px 0 20px 0;
 }
@@ -92,5 +91,4 @@
     background: rgba(0, 00, 00, 0);
     width: 100%;
   }
-
 }
