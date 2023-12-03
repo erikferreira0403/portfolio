@@ -47,7 +47,7 @@ import {MatStepperModule} from '@angular/material/stepper';
     MatDialogModule,
     MatBottomSheetModule,
     MatListModule,
-    MatStepperModule
+    MatStepperModule,
    ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,14 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
 html, body { height: 100%; }
 body { margin: 0; font-family: Arial, Helvetica;
-  background: #F3F3F3;
+  background: #FFFFFF url('./assets/img/stacked-peaks-haikei.png') no-repeat right top fixed;
+  background-size: 100vw;
+  background-size: cover;
 
 }
 
+@media (max-width: 767px) {
+body {
+  background: #FFFFFF url('./assets/img/stacked-peaks-haikei-phone.png') no-repeat right top fixed;
+  background-size: cover;
+
+
+
+}
+}
 
 a{
     text-decoration: none;
     color: black;
 }
 
+@keyframes fade-down{
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+@keyframes fade-up{
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
 
